@@ -24,9 +24,10 @@ export default class App extends Component {
         <hr />
 
         <a target="_blank" href="https://helenzys.com/">link should open in new tab</a>
+        <br />
         <a target="_self" href="https://helenzys.com/">link should not open in new tab</a>
+        <br />
         <a href="https://helenzys.com/">link should not open in new tab</a>
-
       </div>
     )
   }
