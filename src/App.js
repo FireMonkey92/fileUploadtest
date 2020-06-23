@@ -1,35 +1,32 @@
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-import React, { Component } from 'react'
-
-export default class App extends Component {
-  handleChange = e => {
-    e.preventDefault();
-    e.stopPropagation();
-    const SingleFile = e.dataTransfer || e.currentTarget;
-    console.log("SingleFile", SingleFile)
-  }
-  render() {
-    return (
-      <div>
-        <input
-          type="file"
-          name='name'
-
-          id="filesToUpload"
-          onClick={(e) => console.log("e", e)}
-          accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf"
-          onChange={this.handleChange}
-        />
-
-        <hr />
-
-        <a target="_blank" href="https://helenzys.com/">link should open in new tab</a>
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React Opens in new tab
+        </a>
         <br />
-        <a target="_self" href="https://helenzys.com/">link should not open in new tab</a>
+        <a className="App-link" target="_blank" href="https://helenzys.com/">link should open in new tab</a>
         <br />
-        <a href="https://helenzys.com/">link should not open in new tab</a>
-      </div>
-    )
-  }
+        <a className="App-link" target="_self" href="https://helenzys.com/">link should not open in new tab</a>
+        <br />
+        <a className="App-link" href="https://helenzys.com/">link should not open in new tab</a>
+      </header>
+    </div>
+  );
 }
 
+export default App;
