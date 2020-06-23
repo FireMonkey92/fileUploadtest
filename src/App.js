@@ -20,6 +20,13 @@ export default class App extends Component {
           accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf"
           onChange={this.handleChange}
         />
+
+        <hr />
+
+        <a target="_blank" href="https://helenzys.com/">link should open in new tab</a>
+        <a target="_self" href="https://helenzys.com/">link should not open in new tab</a>
+        <a href="https://helenzys.com/">link should not open in new tab</a>
+
       </div>
     )
   }
