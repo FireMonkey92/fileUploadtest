@@ -19,11 +19,11 @@ function App() {
           Learn React Opens in new tab
         </a>
         <br />
-        <a className="App-link" target="_blank" href="https://helenzys.com/">link should open in new tab</a>
+        <a rel="noopener noreferrer" className="App-link" target="_blank" href="https://helenzys.com/">link should open in new tab</a>
         <br />
-        <a className="App-link" target="_self" href="https://helenzys.com/">link should not open in new tab</a>
+        <a rel="noopener noreferrer" className="App-link" target="_self" href="https://helenzys.com/">link should not open in new tab</a>
         <br />
-        <a className="App-link" href="https://helenzys.com/">link should not open in new tab</a>
+        <a rel="noopener noreferrer" className="App-link" href="https://helenzys.com/">link should not open in new tab</a>
       </header>
     </div>
   );
