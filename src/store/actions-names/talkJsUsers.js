@@ -1,4 +1,0 @@
-export const TALKJS_ACTIONS = {
-    GET_ALL_USERS: 'GET_ALL_USERS',
-    CLEAR_ALL_USERS: 'CLEAR_ALL_USERS'
-};
