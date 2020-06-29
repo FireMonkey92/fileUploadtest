@@ -1,0 +1,217 @@
+@import '../../assets//less/base/colors.less';
+
+.account {
+    &-page {
+        padding: 36px 0 60px 0;
+        padding-top: 80px;
+
+        &-title {
+            font-size: 24px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @primaryColor;
+            margin-bottom: 38px;
+        }
+    }
+
+    &-form {
+        &-body {
+            display: flex;
+            height: 445px;
+            background-color: @White;
+            padding: 57px 60px 56px 50px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+
+            .left {
+                padding: 10px 50px 0 0;
+                display: flex;
+                flex: 1;
+                align-items: center;
+                border-right: 1px solid @grey;
+
+
+
+
+                .addAvatar {
+                    .container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                      }
+                      
+                    .avatar-edit {
+                        top: 10px;
+                        right: 10px;
+                    }
+
+                    .avatar-remove {
+                        right: -12px;
+                        top: 40px;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    margin-top: 29px;
+
+                    button {
+                        width: 85px;
+                        height: 30px;
+                        border-radius: 4px;
+                    }
+
+                    .upload {
+                        color: @White;
+                        background-color: @primaryColor;
+                        margin-right: 10px;
+                    }
+
+                    .remove {
+                        background-color: @greyButton;
+                        color: @grey;
+                    }
+                }
+            }
+
+            .right {
+                flex: 2;
+                padding: 0px 0px 0px 51px;
+
+                .Detail-form {
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    height: 100%;
+                    padding-bottom: 10px;
+
+                    .name {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-size: 16px;
+
+                        span {
+                            color: @grey;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .account-form-button {
+            display: flex;
+            margin-top: 20px;
+            justify-content: flex-end;
+
+            button {
+                width: 180px;
+                height: 37px;
+                border-radius: 4px;
+            }
+
+            .delete_account {
+                margin-right: 15px;
+                background-color: @greyButton;
+                font-size: 18px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: @color1;
+            }
+
+            .disabled {
+                font-size: 18px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: @lightGrey;
+                cursor: not-allowed;
+                background-color: @grey2;
+            }
+
+            .save {
+                font-size: 18px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: @White;
+                background-color: @primaryColor;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .account-page {
+        .account-page-title {
+            display: none
+        }
+
+        .account-form-body {
+            flex-direction: column;
+            height: 600px;
+            padding: 0px 30px 0px 30px;
+
+            .left {
+                border-right: 0px;
+                padding: 0px
+            }
+
+            .right {
+                padding: 0px;
+                margin-top: 40px;
+
+                .name {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .account-page .account-form-body .right .name {
+        // display: block;
+        display: flex
+    }
+}
+
+@media only screen and (width: 768px) {
+    .account-page {
+
+        .account-form {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 35px;
+        }
+
+        .account-form-body {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .left {
+                border-right: 0px;
+                padding: 0px;
+            }
+
+            .right {
+                padding: 0px;
+                margin-top: 40px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,273 @@
+@import '../../../assets/less/base/colors.less';
+
+.setting {
+
+
+    &-page {
+        background-color: @bg3;
+        height: 100% !important;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    &-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &>div {
+            padding: 40px 0;
+            width: 80%;
+        }
+
+        .SingleSelect {
+            padding-right: 0 !important;
+
+            .error_message {
+                font-size: 16px;
+                font-weight: 300;
+                font-style: normal;
+                white-space: nowrap;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ff2727;
+            }
+        }
+
+        .InputTextArea {
+            padding-right: 0 !important;
+
+            .error_message {
+                font-size: 16px;
+                font-weight: 300;
+                font-style: normal;
+                white-space: nowrap;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ff2727;
+            }
+        }
+
+        .input {
+            padding-right: 0 !important;
+
+            .error_message {
+                font-size: 16px;
+                font-weight: 300;
+                font-style: normal;
+                white-space: nowrap;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ff2727;
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #202022;
+            padding-bottom: 40px;
+        }
+
+        .back_button {
+            padding-bottom: 35px;
+            position: relative;
+            width: 100px;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #242426;
+            padding-left: 30px;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                background: url('../../../assets/images/png/left-arrow-black.png') 50% 50% no-repeat;
+                background-size: contain;
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .viewChatLog_buttom {
+                float: right;
+                width: 123px;
+                height: 28px;
+                color: #c8d1d7;
+                border-radius: 15px;
+                background-color: #c8d1d7;
+            }
+        }
+
+        .button {
+            padding: 8px 50px;
+            background-color: @green;
+            border-radius: 6px;
+            text-align: right;
+            margin-top: 15px;
+            float: right;
+            color: @White;
+        }
+    }
+
+    &-tabs_container {
+        padding-top: 40px;
+        flex-basis: 20%;
+        background: #F5F9FA;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3,
+        .tab {
+            padding: 20px;
+            border-left: 2px solid #E1E6E7;
+        }
+
+        .tab {
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+
+            &.active {
+                border-left: 3px solid @primaryColor;
+                font-size: 110%;
+                color: @primaryColor;
+            }
+        }
+    }
+
+    &-table_container { 
+        padding-top: 40px;
+        flex-basis: 80%;
+        background: #FFF;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px;
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @primaryColor;
+        }
+
+        div {
+            flex: 1;
+        }
+
+        div.input {
+            margin: 0 !important;
+            display: flex;
+            flex: 2 !important;
+            position: relative;
+            padding-right: 0 !important;
+
+            &::after {
+                content: '';
+                background: url('../../../assets/images/png/search.png') 50% 50% no-repeat;
+                background-size: contain;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: 20px;
+                right: 10px;
+            }
+        }
+
+        .add_new_container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            button {
+                padding: 10px 20px 10px 50px;
+                border-radius: 4px;
+                background-color: @primaryColor;
+                font-size: 14px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: @White;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background: url('../../../assets/images/png/add.png') 50% 50% no-repeat;
+                    background-size: contain;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 10px;
+                    left: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+.ant-drawer-content-wrapper {
+    width: 50% !important;
+}
+
+#tableContainer {
+    padding: 20px 40px 20px 40px;
+    .rowCursorPointer{
+        cursor: pointer;
+    }
+    .ant-table-thead {
+        tr th {
+            background-color: #f5f9fa;
+        }
+
+        .ant-table-header-column {
+            .ant-table-column-title {
+                font-size: 12px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #202022;
+            }
+        }
+    }
+
+    .ant-table-tbody {
+        tr td {
+            font-size: 12px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            color: #202022
+        }
+    }
+}

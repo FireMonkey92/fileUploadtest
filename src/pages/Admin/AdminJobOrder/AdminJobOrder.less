@@ -1,0 +1,181 @@
+.Job_Orders {
+    padding-top: 70px;
+
+    #tableContainer {
+        padding: 40px 0 !important;
+        .rowCursorPointer{
+            cursor: pointer;
+        }
+    }
+
+    #tableContainer {
+        .job_done {
+            color: #1a9149;
+        }
+
+        .job_rejected {
+            color: #ff2727;
+        }
+    }
+}
+
+#jobOrder_drawer {
+    .ant-drawer-content-wrapper {
+        width: 75% !important;
+    }
+
+    .Job_order-form {
+        div {
+            width: 88%;
+            padding: 40px 0;
+        }
+    }
+
+    .flex-row-center{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .setting-form {
+        .jobOrder_View {
+            width: 90%;
+
+            .chat_button {
+                border-radius: 15px;
+                background-color: #c8d1d7;
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+                padding: 5px 10px;
+                cursor: pointer;
+                float: right;
+                -webkit-transition: all .5s;
+                transition: all .5s;
+
+                a {
+                    color: #ffffff;
+                }
+
+                &:hover {
+                    background-color: #1a9149;
+
+                }
+            }
+
+            .Job_Title {
+                font-size: 22px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #242426;
+            }
+
+            .TitleText {
+                margin: 10px 0;
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #242426;
+            }
+
+            .head_lable {
+                margin: 10px 0;
+                font-size: 14px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #b8b8b8;
+            }
+
+            .head_lableDarkr {
+                margin: 10px 0;
+                font-size: 16px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #242426;
+            }
+
+            .head_lableDarkr.margin0 {
+                margin: 0;
+                font-size: 14px;
+            }
+            .alignRight {
+                text-align: right
+            }
+
+            .TitleTextLight {
+                color: #a5a9ac;
+            }
+
+            .TitleTextLightRight {
+                color: #a5a9ac;
+                text-align: right;
+                margin: 10px 0;
+
+                div {
+                    display: contents;
+                    color: #242426;
+                }
+            }
+
+            .SuccessText {
+                color: #1a9149
+            }
+
+            .TitleTextDarker {
+                margin: 10px 0;
+                font-size: 14px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.57;
+                letter-spacing: normal;
+                color: #242426;
+            }
+
+            .jobStatusStepsOk {
+                .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+                    background-color: #1a9149 !important;
+                }
+
+                .ant-steps-item-process .ant-steps-item-icon>.ant-steps-icon .ant-steps-icon-dot {
+                    background-color: #1a9149 !important;
+                }
+
+                .ant-steps-item-finish .ant-steps-item-icon>.ant-steps-icon .ant-steps-icon-dot {
+                    background-color: #1a9149 !important;
+                }
+            }
+
+            .jobStatusStepsNotOk {
+                .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+                    background-color: #ff2727 !important;
+                }
+
+                .ant-steps-item-process .ant-steps-item-icon>.ant-steps-icon .ant-steps-icon-dot {
+                    background-color: #ff2727 !important;
+                }
+
+                .ant-steps-item-finish .ant-steps-item-icon>.ant-steps-icon .ant-steps-icon-dot {
+                    background-color: #ff2727 !important;
+                }
+            }
+        }
+    }
+}

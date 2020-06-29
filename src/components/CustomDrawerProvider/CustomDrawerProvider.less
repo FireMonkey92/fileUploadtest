@@ -1,0 +1,239 @@
+@import '../../assets/less/base/colors.less';
+
+.customDrawer {
+    display: flex;
+    flex-direction: column;
+    background-color: @bg4;
+
+    &-head {
+        width: 100%;
+        min-height: 240px;
+        padding: 90px 0 30px 40px;
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .back_button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: @color8;
+                width: 90px;
+                cursor: pointer;
+
+                img {
+                    width: 28px;
+                    height: 20px;
+                }
+
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .chat {
+                display: grid;
+                place-items: center;
+                width: 70px;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: 500;
+                border: 1px solid @primaryColor;
+                color: @primaryColor;
+                cursor: pointer;
+                padding: 2px 10px;
+                transition: all 0.5s ease;
+
+                &:hover {
+                    background: @primaryColor;
+                    color: @White;
+                }
+            }
+        }
+
+        h4 {
+            font-size: 22px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @color8;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @grey2;
+        }
+
+        h6 {
+            width: 183px;
+            height: 19px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @color8;
+        }
+    }
+
+    &-body {
+        height: 650px;
+        padding: 20px 0 0 40px;
+        border-top: 1.5px solid @color5;
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @grey2;
+        }
+
+        &__card {
+            width: 80%;
+            height: 520px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+            background-color: #ffffff;
+
+            .status {
+                margin: 0 15px;
+                padding: 20px 15px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .title {
+                    h4 {
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+
+                        &.approval {
+                            color: @approvalFont;
+                        }
+
+                        &.progress {
+                            color: @progressFont;
+                        }
+
+                        &.attention {
+                            color: @attentionFont;
+                        }
+
+                        &.success {
+                            color: @successFont;
+                        }
+
+                        &.rejected {
+                            color: @rejectFont;
+                        }
+                    }
+
+                    span {
+                        color: #202022;
+                    }
+                }
+
+                .button-group {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .payment {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 15px;
+                padding: 20px 15px 25px;
+                border-top: 1px solid @color5;
+
+                .amount,
+                .count {
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #2a2a2b;
+                }
+
+                .amount {
+                    font-weight: bold !important;
+                    margin-bottom: 4px;
+                }
+
+                .payment_status {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-basis: 20%;
+                }
+            }
+
+            .notes {
+                margin: 0 15px;
+                padding: 20px 15px 25px;
+                border-top: 1px solid @color5;
+                border-bottom: 1px solid @color5;
+
+                h6 {
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #242426;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.57;
+                    letter-spacing: normal;
+                    color: #242426;
+                }
+
+            }
+
+
+        }
+    }
+}
+
+.ant-drawer-body {
+    padding: 0 !important;
+    height: 100%;
+}

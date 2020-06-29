@@ -1,0 +1,147 @@
+@import '../../assets/less/base/colors.less';
+
+.signup {
+    &-page {
+        padding-top: 70px;
+    }
+
+
+    &-container {
+        margin-top: 50px;
+        margin-bottom: 65px;
+        min-height: 80vh;
+        border-radius: 4px;
+        background-color: @White;
+
+        .head {
+            padding: 28px 35px;
+
+            h2 {
+                font-size: 24px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: @primaryColor;
+            }
+
+            p {
+                margin: 17px 0 26px;
+                font-size: 16px;
+                max-width: 765px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                color: @color5;
+            }
+        }
+
+
+        hr {
+            width: 100%;
+            opacity: 0.5;
+            border: solid 1px @color5;
+        }
+
+        .bottom {
+            padding: 30px 35px;
+
+            h4 {
+                font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: @color1;
+            }
+
+            .choice {
+                padding: 34px 0 40px;
+
+                &-label {
+                    font-size: 16px !important;
+                    font-weight: 300 !important;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: @color1;
+                    margin-right: 35px;
+                    padding-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.iagree {
+    span.quote {
+        margin-left: 15px;
+    }
+
+    .ant-checkbox-wrapper {
+        margin: 10px 0 20px !important;
+    }
+}
+
+.thanks {
+     background-color: @primaryColor  !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .signup {
+        // &-page {
+        //     padding-top: 70px;
+        // }
+
+        .signup-container {
+            margin-top: 10px;
+            // min-height: 0px;
+            margin-bottom: 0;
+
+            .head {
+                padding: 10px 10px;
+
+                h2 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                // p {
+                //     margin: 0;
+                // }
+            }
+
+            .bottom {
+                padding: 10px 10px;
+
+                .choice {
+                    padding: 10px 10px;
+
+                    .choice-group {
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+
+                        .ant-radio-wrapper {
+                            padding: 5px;
+
+                            span {
+                                .choice-label {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

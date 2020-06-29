@@ -1,32 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import {ConnectedRouter} from 'connected-react-router';
+import Routes from './Routes';
+import './assets/less/main.less';
+import {store, persistor, history} from './store/store';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Opens in new tab
-        </a>
-        <br />
-        <a rel="noopener noreferrer" className="App-link" target="_blank" href="https://helenzys.com/">link should open in new tab</a>
-        <br />
-        <a rel="noopener noreferrer" className="App-link" target="_self" href="https://helenzys.com/">link should not open in new tab</a>
-        <br />
-        <a rel="noopener noreferrer" className="App-link" href="https://helenzys.com/">link should not open in new tab</a>
-      </header>
-    </div>
-  );
-}
+require('es6-promise').polyfill();
 
-export default App;
+
+ReactDOM.render(
+  <Provider store={store}>
+    <PersistGate persistor={persistor}>
+      <ConnectedRouter history={history}>
+        <Routes history={history} store={store} />
+      </ConnectedRouter>
+    </PersistGate>
+  </Provider>,
+  document.getElementById('root'),
+);

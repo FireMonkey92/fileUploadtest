@@ -1,0 +1,65 @@
+@import '../../assets/less/base/colors.less';
+
+.SearchBar {
+    background-color: #FFFFFF;
+    height: 70px;
+    color: #8e8e8e;
+    border-bottom: 1px solid lightgrey;
+
+    .SearchBarheader {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .SearchInput {
+        color: #202022;
+        font-size: 14px;
+        font-weight: 500;
+
+        .ant-input {
+            border: 1px solid #FFFFFF !important
+        }
+
+        .ant-input-suffix {
+            background-color: white
+        }
+    }
+
+    .ColLocation {
+        // padding-left: 15px;
+        // padding-right: 2px;
+        color: #202022;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-right: 10px;
+
+        .imagePin {
+            padding-right: 23px;
+        }
+    }
+
+    .locationText {
+        color: #202022;
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+
+    .ColFilter {
+        padding-left: 2px;
+        padding-top: 10px;
+
+        .filterImage {
+            padding-right: 8px
+        }
+    }
+
+    .filter-button {
+        width: 80px;
+        cursor: pointer;
+
+        &:hover {
+            color: @primaryColor;
+        }
+    }
+}

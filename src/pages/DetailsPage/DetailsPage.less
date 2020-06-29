@@ -1,0 +1,29 @@
+.chatbox-container {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    height: 500px;
+    right: 5%;
+    // width: 600px;
+    display: none;
+
+    &.show {
+        display: block !important;
+    }
+
+    i {
+        z-index: 100;
+    }
+
+    .center-stage {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .chatbox-container {
+        height: 500px;
+        width: auto;
+    }
+}

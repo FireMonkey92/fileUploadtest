@@ -1,0 +1,101 @@
+@import "../../../assets/less/base/colors.less";
+
+.filterHeader {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  // height: 70px;
+  justify-content: center;
+
+  .button-group {
+    display: flex;
+    align-items: center;
+    margin: 12px 0 20px;
+
+    .disabled {
+      margin-right: 10px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: not-allowed;
+      font-size: 15px;
+      opacity: 0.8;
+      transition: all 0.6s ease;
+      height: 30px;
+      border: 1px solid;
+      background: transparent;
+      color: black;
+    }
+
+    button {
+      background: transparent;
+      padding: 7px 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14);
+    }
+
+    .apply {
+      border: 1px solid @primaryColor;
+      color: @primaryColor;
+
+      &:hover {
+        transition: all 0.4s ease-in-out;
+        background: @primaryColor;
+        color: @White;
+      }
+    }
+
+    .reset {
+      border: 1px solid @orange;
+      color: @orange;
+
+      &:hover {
+        transition: all 0.4s ease-in-out;
+        background: @orange;
+        color: @color4;
+      }
+    }
+  }
+}
+
+.ant-select-selection {
+  border: 1px solid @primaryColor  !important;
+  color: @primaryColor;
+}
+
+.ant-btn-primary {
+  background-color: @primaryColor  !important;
+  border-color: @primaryColor  !important;
+  padding: 0 25px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .filterHeader {
+    .SingleSelect {
+      padding-right: 6px;
+      justify-content: center;
+    }
+
+    .button-group {
+      margin: 16px 0 15px;
+
+      .reset {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filterHeader {
+    .SingleSelect {
+      padding-right: 15px;
+    }
+
+    .button-group {
+      height: 60px;
+      margin: 0 !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

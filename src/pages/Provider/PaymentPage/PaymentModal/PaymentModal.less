@@ -1,0 +1,227 @@
+@import '../../../../assets/less/base/colors.less';
+
+.payment {
+    &-modal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+
+        &-header {
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid @borderColor1;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+
+            .title {
+                font-size: 20px;
+            }
+
+            .close {
+                font-size: 25px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        &-body {
+            padding: 20px 30px;
+            flex: 1;
+            position: relative;
+
+
+            form {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+
+                .titleselect {
+                    .SingleSelect {
+                        padding-right: 0;
+                    }
+                }
+
+                .title {
+                    .input {
+                        padding-right: 0;
+
+                    }
+                }
+
+                .payment-select {
+                    &__control {
+                        border-bottom: 1px solid @greyButton  !important;
+                        border-style: none;
+
+                        &:hover {
+                            box-shadow: none;
+                        }
+
+                        &--is-focused {
+                            box-shadow: none;
+                        }
+                    }
+
+                    &__indicator-separator {
+                        display: none;
+                    }
+
+                    &__value-container {
+                        height: 40px !important;
+                    }
+
+                    &__single-value {
+                        font-size: 14px;
+                        color: @grey;
+                    }
+
+                    &__menu {
+                        & div {
+                            padding: 5px;
+                            font-size: 13px;
+                            color: @Black;
+                        }
+                    }
+                }
+
+                .button-group {
+                    position: absolute;
+                    bottom: 10px;
+                    height: 40px;
+                    display: flex;
+                    flex: 1;
+                    width: 85%;
+                    justify-content: space-between;
+
+                    & button {
+                        flex-basis: 90%;
+                        border-radius: 4px;
+                        display: grid;
+                        height: 35px;
+                        place-items: center;
+                        cursor: pointer;
+                        background: transparent;
+                        color: @Black;
+                    }
+
+                    .save {
+                        border: 1px solid green;
+                        transition: all 0.4s ease-in;
+
+                        &:hover {
+                            background: rgba(51, 177, 51, 0.200);
+                        }
+                    }
+                }
+            }
+
+            .select {
+                margin-bottom: 30px;
+            }
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+                font-weight: 400;
+                color: @color1;
+
+                input {
+                    padding: 8px;
+                    font-size: 14px;
+                    color: @grey;
+                    border-bottom: 1px solid @greyButton;
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    &-leftSide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        height: 100%;
+        background-color: @primaryColor;
+        border: none;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        h2 {
+            padding-top: 20px;
+            color: @White;
+            font-weight: 700;
+        }
+    }
+
+    &-rightSide {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        height: 100%;
+
+
+    }
+
+}
+
+.ReactModal__Overlay {
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+    .payment-leftSide {
+        display: none;
+    }
+
+    .payment-modal {
+        &-header {
+            .title {
+                font-size: 14px;
+            }
+        }
+
+        &-body {
+            form {
+                .button-group {
+                    bottom: 20px;
+
+                    button {
+                        flex-basis: 100%;
+                    }
+
+                }
+            }
+
+            .select {
+                margin-bottom: 0px;
+            }
+
+            .title input {
+                margin-bottom: 10px !important;
+            }
+
+            .title {
+                .input {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+
+    .titleselect {
+        .SingleSelect {
+            padding: 0px !important;
+        }
+    }
+}

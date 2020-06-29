@@ -1,0 +1,196 @@
+@import '../../assets/less/base/colors.less';
+@import '../../assets/less/base/variables.less';
+
+.ReactModal__Content {
+    padding: 0 !important;
+    scroll-behavior: none;
+
+    .modalclose {
+        cursor: pointer;
+        margin-left: 95%;
+        margin-top: 8px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .Signup_modal {
+        padding: 30px 0 55px 0;
+
+        .title {
+            width: 409px;
+            height: 41px;
+            font-size: 34px;
+            font-weight: 900;
+            text-align: center;
+            color: @primaryColor;
+        }
+
+        p {
+            margin: 12px 0 39px 0;
+            width: 368px;
+            height: 19px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: @color1;
+        }
+
+        .choice{
+            .flex-center{
+                flex: auto !important;
+            }
+        }
+
+
+        .as_provider,
+        .as_user {
+            font-size: 26px;
+            font-weight: 900;
+            color: @White;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .as_user {
+            width: 190px;
+            height: 70px;
+            border-radius: 4px;
+            background-color: @userBtnPrimaryColor;
+        }
+
+        .as_provider {
+            width: 190px;
+            height: 70px;
+            border-radius: 4px;
+            background-color: @providerBtnPrimaryColor;
+        }
+    }
+}
+
+.signUp_Responsive_modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    border: 1px solid rgb(151, 151, 151);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 544px;
+    height: 290px;
+}
+
+@media screen and (width: 320px) {
+    .signUp_Responsive_modal {
+        width: 281px !important;
+        height: 163px !important;
+    }
+
+}
+
+@media only screen and (width: 375px) {
+    .signUp_Responsive_modal {
+        width: 320px !important;
+        height: 163px !important;
+
+        .Signup_modal {
+            padding: 15px 0px;
+        }
+    }
+}
+
+@media only screen and (width: 360px) {
+    .signUp_Responsive_modal {
+        width: 290px !important;
+    }
+}
+
+@media only screen and (width: 414px) {
+    .signUp_Responsive_modal {
+        width: 320px !important;
+        height: 163px !important;
+
+        .Signup_modal {
+            padding: 15px 0px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ReactModal__Content .modalclose {
+        margin-left: 93%;
+    }
+
+    .signUp_Responsive_modal {
+        width: 320px;
+        height: 163px;
+
+        .Signup_modal {
+            padding: 15px 0px;
+
+            .title {
+                width: 255px;
+                color: #202022;
+                font-size: 22px;
+                letter-spacing: -0.44px;
+            }
+
+            p {
+                margin: -5px 0px 15px;
+                width: 230px;
+                height: 12px;
+                font-size: 10px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.2;
+                letter-spacing: -0.1px;
+                text-align: center;
+                color: #202022;
+            }
+
+            .choice {
+                
+                .as_user {
+                    width: 98px;
+                    height: 34px;
+                    font-weight: 900;
+                    font-family: @font-family;
+                    font-size: 14px;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.21;
+                    letter-spacing: -0.28px;
+                    text-align: center;
+                    color: #ffffff;
+                    margin: 5px;
+                    border-radius: 3px;
+                    background-color: @userBtnPrimaryColor;
+                }
+
+                .as_provider {
+                    margin: 5px;
+                    font-weight: 900;
+                    font-family: @font-family;
+                    font-size: 14px;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.21;
+                    letter-spacing: -0.28px;
+                    text-align: center;
+                    color: #ffffff;
+                    width: 98px;
+                    height: 34px;
+                    border-radius: 3px;
+                    background-color: @providerBtnPrimaryColor ;
+                }
+            }
+        }
+
+    }
+}

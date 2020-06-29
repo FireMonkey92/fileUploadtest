@@ -1,0 +1,293 @@
+@import "../../../assets/less/base/variables.less";
+
+.Payments {
+  border-radius: 4px;
+  background-color: @White;
+  margin-bottom: 20px;
+  margin-top: 70px;
+
+  hr {
+    width: 100%;
+    opacity: 0.5;
+    border: solid 1px @color5;
+  }
+
+  .headerSection {
+    padding: 28px 35px 26px;
+  }
+
+  &-FormContainer {
+    display: flex;
+    justify-content: center;
+
+    form {
+      flex: 1;
+    }
+
+    .debit-card-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .card {
+        margin: 70px 40px 50px;
+        position: relative;
+        padding: 20px;
+        width: 350px;
+        border-radius: 8px;
+        box-shadow: 2px 2px #eef1f4;
+        height: 230px;
+        background-image: linear-gradient(to right,
+            rgba(56, 147, 163, 0.753),
+            rgb(41, 116, 167));
+
+        .name {
+          position: absolute;
+          bottom: 15px;
+          font-size: 18px;
+          color: @White;
+          text-transform: uppercase;
+        }
+
+        .cardNumber {
+          position: absolute;
+          bottom: 70px;
+          font-size: 22px;
+          color: #ffffff;
+          letter-spacing: 0.875em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &-header {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: @primaryColor;
+  }
+
+  &-description {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: @color5;
+    padding-right: 140px;
+    padding-top: 17px;
+  }
+
+  &-Detail {
+    padding: 28px 125px 17px 35px;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+    .bankDetails {
+      .ifscInput {
+        display: flex;
+        flex-basis: 30%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .bankSection {
+      display: flex;
+      padding-top: 30px;
+      margin-bottom: 30px;
+
+      &>div {
+        flex: 1;
+      }
+    }
+
+    .bankSectionPartTwo {
+      display: flex;
+
+      .leftSection {
+        display: flex;
+        flex-basis: 50%;
+
+        .cvv {
+          flex-basis: 50%;
+        }
+
+        .expDate {
+          flex-basis: 50%;
+        }
+      }
+
+      .RightSection {
+        flex-basis: 50%;
+      }
+    }
+
+    .submit {
+      display: flex;
+      justify-content: flex-end;
+      margin: 30px 40px 90px 0;
+
+      button {
+        width: 195px;
+        height: 34px;
+        border-radius: 4px;
+        background-color: @primaryColor;
+        box-shadow: 2px 3px #eff3f775;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: @White;
+      }
+    }
+  }
+
+  .error_message {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: @red;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .Payments {
+    .headerSection {
+      .Payments-header {
+        display: none;
+      }
+    }
+  }
+
+  .Payments .headerSection {
+    padding: 9px 16px 26px;
+  }
+
+  .Payments-description {
+    padding-right: 0;
+  }
+
+  .Payments-FormContainer {
+    display: block;
+  }
+
+  .BankAccountCard .card {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+
+
+
+  .Payments-Detail {
+    padding: 28px 0px 17px 35px;
+
+    .bankSection {
+      display: block;
+    }
+
+    .submit {
+      justify-content: center;
+    }
+  }
+}
+
+.payment_modal_responsive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  border: none;
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 10px;
+  outline: none;
+  padding: 20px;
+  width: 50%;
+  height: 500px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease-in 0s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+  .payment_modal_responsive {
+    width: 300px !important;
+    top: 54%;
+    height: 450px !important;
+
+    .payment-modal {
+      .payment-rightSide {
+        .payment-modal-header {
+          padding: 10px 16px;
+
+
+        }
+
+        .payment-modal-body {
+          padding: 7px 20px;
+        }
+
+        form {
+          .select {
+            margin-bottom: 20px;
+          }
+
+          .title {
+            input {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+  .payment_modal_responsive {
+    width: 330px !important;
+    top: 54%;
+    height: 514px !important;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 410px) {
+  .payment_modal_responsive {
+    width: 344px !important;
+    top: 54%;
+    height: 531px !important;
+  }
+}
+
+
+@media only screen and (min-width: 411px) and (max-width: 799px) {
+  .payment_modal_responsive {
+    width: 390px !important;
+    top: 50%;
+    height: 531px !important;
+  }
+}

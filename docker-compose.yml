@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  frontend: # checkman-frontend For Frontend App
+    container_name: checkman-frontend
+    image: eraltech.checkman.web.desktop
+    ports:
+      - "8080:80" # Forward site to localhost:80

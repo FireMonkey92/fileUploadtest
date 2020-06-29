@@ -1,0 +1,196 @@
+@import "../../../assets/less/base/colors.less";
+
+.member {
+  #tableContainer {
+    padding: 20px 0 !important;
+    .rowCursorPointer{
+      cursor: pointer;
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    // margin-top: 70px;
+
+    .SingleSelect {
+      flex-basis: 20%;
+    }
+
+    div.input,
+    form {
+      padding: 0;
+      flex: 1;
+    }
+  }
+
+  &-input-group {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    form {
+      display: flex;
+    }
+
+    .button {
+      margin: 10px 20px;
+      display: grid;
+      place-items: center;
+      padding: 5px 20px;
+      color: #ffffff;
+      background: @primaryColor;
+      border-radius: 6px;
+      height: 37px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14);
+
+      &:hover {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.34);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+    }
+  }
+
+  // form {
+  //     .member-input-group {
+  //         flex-basis: 40%;
+  //         display: flex;
+  //         flex-direction: row;
+  //         justify-content: space-between;
+
+  //         .button {
+  //             margin: 10px 20px;
+  //             display: grid;
+  //             place-items: center;
+  //             padding: 5px 20px;
+  //             color: #ffffff;
+  //             background: @primaryColor;
+  //             border-radius: 6px;
+  //             height: 37px;
+  //             cursor: pointer;
+  //             box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14);
+
+  //             &:hover {
+  //                 box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.34);
+  //                 transition: box-shadow 0.3s ease-in-out;
+  //             }
+  //         }
+  //     }
+  // }
+}
+
+.error_message {
+  color: red;
+}
+
+.ant-pagination {
+  text-align: right;
+  margin-top: 20px !important;
+}
+
+.ant-pagination-item-link,
+.ant-pagination-item {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ant-pagination-item-active {
+  font-size: 110%;
+}
+
+.member_page_model {
+  .ant-drawer-content-wrapper {
+    .ant-drawer-content {
+      .ant-drawer-body {
+        .setting-form {
+          .button {
+            margin: 10px 20px;
+            display: grid;
+            place-items: center;
+            padding: 5px 20px;
+            color: #ffffff;
+            background: @green;
+            border-radius: 6px;
+            height: 37px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14);
+
+            &:hover {
+              box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.34);
+              transition: box-shadow 0.3s ease-in-out;
+            }
+          }
+
+          .form-container {
+            .Independent-form {
+              ._mutli-select {
+                height: auto;
+              }
+
+              .signup {
+                padding-top: 0px;
+
+                // h4 {
+                //     padding-top: 35px;
+                //     padding-bottom: 10px;
+                // }
+
+                .avatar_row {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+
+                  img {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    border: 1px solid #ffffff;
+                  }
+
+                  .title {
+                    padding-left: 20px;
+                    padding-bottom: 0px;
+                  }
+                }
+              }
+
+              .input,
+              .SingleSelect,
+              .InputTextArea {
+                padding-right: 30px !important;
+              }
+
+              .input_select {
+                .input_select_date {
+                  width: auto;
+
+                  .user-form-day,
+                  .user-form-month,
+                  .user-form-year {
+                    width: auto;
+
+                    .SingleSelect {
+                      width: 170px;
+                    }
+                  }
+                }
+              }
+
+              .input-title {
+                .MultiSelect,
+                .InputTextArea {
+                  padding-right: 0px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
